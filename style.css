@@ -1,0 +1,308 @@
+/* General styles */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:rgb(3, 232, 167);
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: linear-gradient(135deg, #8e44ad, #3498db);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #005fa3;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+    font-family: cursive;
+    font-size: large;
+    margin: auto;
+    padding: 20px;
+    
+}
+nav a:hover {
+    text-decoration: underline; /* Adds underline */
+    color: #155098; /* Optional: change color */
+}
+
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-button .circle {
+    width: 16px;
+    height: 16px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.dark-mode .toggle-button .circle {
+    transform: translateX(20px);
+    background-color: #000000;
+}
+
+/* Responsive Profile Section */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+    background-color:none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile img {
+    width: 100%;
+    max-width: 250px;
+    height: 310px;
+    
+    border: 4px;
+}
+
+.profile div {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.profile h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: Roboto Mono,monospace;
+    cursor: pointer;
+}
+
+.profile p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Form Section */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #005fa3;
+}
+
+/* Social Media Buttons */
+#facebook, #linkedin, #github, #resume {
+    text-decoration: none;
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#facebook {
+    background-color: #007bff;
+    color: white;
+}
+
+#linkedin {
+    background-color: #007bff;
+    color: white;
+}
+
+#github {
+    background-color:#6e5494;
+    color: white;
+}
+#resume
+{
+    background-color: rgb(205, 199, 237);
+    color: rgb(0, 19, 233);
+}
+#resume:hover
+{
+    background-color: #7746a9;
+    color: rgb(0, 11, 127);
+    
+}
+
+#facebook:hover, #linkedin:hover, #github:hover {
+    background-color: #005fa3;
+    color: white;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .profile {  
+        flex-direction: column;
+    }
+
+    .profile div {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    form {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+.projects-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-container h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+/* Add grid layout */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: #0056b3;
+}
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #0d0664;
+    color: white;
+    font-size: 16px;
+}   
+
+

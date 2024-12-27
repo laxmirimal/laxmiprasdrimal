@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxmi Prasad Rimal</title>
+    <link rel="icon" type="png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div><a href="index.html">Laxmi Prasad Rimal</a></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="toggle-button" id="toggleMode">
+            <div class="circle"></div>
+        </button>
+    </nav>
+    
+    <div class="profile">
+        <img src="123.png" alt="Profile Picture">
+        <h1>LAXMI PRASAD RIMAL <br>
+            <p>Frontend  &  Backend Developer </p></h1><br>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/laxmi-rimal/" id="linkedin"> <i class="fa fa-linkedin-square" style="font-size:24px"></i>LinkedIn</a>
+                <a href="https://www.facebook.com/profile.php?id=100086968500192" id="facebook"><i class="fa fa-facebook-square" style="font-size:24px"></i>Facebook</a>
+                <a href="https://github.com/laxmirimal" id="github"><i class="fa fa-github-square" style="font-size:24px"></i>Github</a>
+                <a href="resume.pdf" id="resume"><i class="fa fa-download" style="font-size:24px"></i>Resume</a>
+                
+        
+            </div>
+        
+    </div>
+
+
+    
+    <script>
+        const toggleButton = document.getElementById('toggleMode');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const footer = document.querySelector('footer');
+        const bodyHeight = document.body.scrollHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (bodyHeight < viewportHeight) {
+            footer.style.position = 'fixed';
+            footer.style.bottom = '0';
+            footer.style.width = '100%';
+        } else {
+            footer.style.position = 'static';
+        }
+    });
+
+
+    </script>
+<footer style="text-align: center; padding: 10px; background-color: #0d0664; color: white; font-size: 16px;">
+    <p>&copy;  All RIGHTS RESERVED    2024  <br> <strong>LAXMI PRASAD RIMAL</strong></p>
+</footer>
+
+</body>
+</html>
