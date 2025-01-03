@@ -3,11 +3,17 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color:rgb(3, 232, 167);
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
     color: #333;
     transition: background-color 0.5s, color 0.5s;
+    animation: gradientBG 8s ease infinite;
 }
 
+@keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 .dark-mode {
     background-color: #333;
     color: #f5f5f5;
