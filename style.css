@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    
     color: #333;
     transition: background-color 0.5s, color 0.5s;
     animation: gradientBG 8s ease infinite;
